@@ -1,0 +1,10 @@
+name             'go-sails'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures go-sails'
+long_description 'Installs/Configures go-sails'
+version          '0.1.0'
+
+depends 'mysql', '~> 5.5.3'
+depends 'nodejs', '~> 2.1.0'
