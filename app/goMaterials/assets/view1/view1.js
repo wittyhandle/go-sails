@@ -13,8 +13,11 @@ angular.module('myApp.view1', ['ui.router'])
       });
 }])
 
-.controller('View1Ctrl', ['$scope', 'loginRequired', 'greeting', function($scope, loginRequired, greeting) {
+.controller('View1Ctrl', ['$scope', 'loginRequired', 'greeting', '$location', function($scope, loginRequired, greeting, $location) {
   $scope.label = 'I am view 1!';
   $scope.l = loginRequired;
   $scope.g = greeting;
+
+  //$location.path('/login');
+
 }]);

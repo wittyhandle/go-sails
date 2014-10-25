@@ -95,7 +95,7 @@ module.exports.sockets = {
   // host: '127.0.0.1',
   // port: 6379,
   // db: 'sails',
-  // pass: '<redis auth password>'
+  // pass: '<redis security password>'
 
 
   /***************************************************************************
