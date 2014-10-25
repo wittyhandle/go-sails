@@ -9,10 +9,12 @@ angular.module('myApp.view1', ['ui.router'])
         url: '/view1',
         templateUrl: 'view1/view1.html',
         controller: 'View1Ctrl',
-        resolve: { loginRequired: loginRequired }
+        resolve: resolveWrapper('harry')
       });
 }])
 
-.controller('View1Ctrl', ['$scope', function($scope) {
+.controller('View1Ctrl', ['$scope', 'loginRequired', 'greeting', function($scope, loginRequired, greeting) {
   $scope.label = 'I am view 1!';
+  $scope.l = loginRequired;
+  $scope.g = greeting;
 }]);

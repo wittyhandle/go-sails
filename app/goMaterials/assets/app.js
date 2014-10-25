@@ -30,7 +30,7 @@ app.run(['$rootScope', '$location', function($rootScope, $location) {
 var loginRequired = function($q) {
 
   var deferred = $q.defer();
-  var monkey = true;
+  var monkey = false;
 
   if(monkey) {
 
@@ -39,9 +39,27 @@ var loginRequired = function($q) {
 
   } else {
 
-    deferred.resolve();
+    console.log('return resolve');
+    deferred.resolve('mike');
 
   }
 
   return deferred.promise;
+}
+
+var resolveWrapper = function(message) {
+
+  return {
+
+    loginRequired: loginRequired,
+    greeting: function($q) {
+
+      var deferred = $q.defer();
+      deferred.resolve('hello ' + message + '.');
+
+      return deferred.promise;
+    }
+
+  }
+
 }
