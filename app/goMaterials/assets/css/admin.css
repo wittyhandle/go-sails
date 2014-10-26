@@ -1,0 +1,44 @@
+html, body {
+  width:100%; /* Needed to avoid a redrawing bug in Firefox when resizing windows */
+  height:100%;
+}
+
+body.login {
+
+  display:-webkit-box;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
+
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
+
+}
+
+.login-container {
+  border: 1px solid #c0c0c0;
+  width: 500px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.login-container .cancel {
+  margin-left: 10px;
+}
+
+.form-group.submit {
+  float: left;
+}
+
+.login-container .alert-danger {
+  padding: 5px 20px;
+  float: left;
+  margin: 5px 0 0 10px;
+  opacity: 1;
+  transition: all linear .20s;
+}
+
+.login-container .alert-danger.ng-hide {
+  opacity: 0;
+}

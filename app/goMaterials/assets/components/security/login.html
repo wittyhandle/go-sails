@@ -1,5 +1,23 @@
+<section class="login-container">
+  <form data-ng-submit="login(credentials)">
+    <fieldset>
+      <legend>Login</legend>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" class="form-control" data-ng-model="credentials.username" placeholder="Username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="Password">
+      </div>
+      <div class="form-group submit">
+        <button type="submit" class="btn btn-info">Log in</button>
+        <button class="btn btn-default cancel">Cancel</button>
+      </div>
 
-<p>login</p>
+      <p ng-show="invalid" class="alert-danger">Invalid login.</p>
 
-<p>{{motto}}</p>
-<p>{{user.user}}</p>
+    </fieldset>
+  </form>
+
+</section>
