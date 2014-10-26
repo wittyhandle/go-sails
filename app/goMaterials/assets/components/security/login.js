@@ -28,6 +28,8 @@ go.controller('LoginController', ['$scope', '$rootScope', 'authenticationService
 
     console.log(credentials);
 
+    $scope.invalid = true;
+
   }
 
 }]);

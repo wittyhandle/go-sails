@@ -2,6 +2,7 @@
 
 // Declare app level module which depends on views, and components
 var app = angular.module('myApp', [
+  'ngAnimate',
   'ui.router',
   'go.login',
   'go.shared.auth',
