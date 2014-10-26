@@ -13,14 +13,21 @@ go.config(['$stateProvider', function($stateProvider) {
 
 }]);
 
-go.controller('LoginController', ['$scope', '$rootScope', 'authenticationService', function($scope, $rootScope, authenticationService) {
+go.controller('LoginController', ['$scope', '$rootScope', 'authenticationService',
+  function($scope, $rootScope, authenticationService) {
 
   $rootScope.bodyClass = 'login';
-  $scope.motto = 'I am the login!';
   authenticationService.authenticate({user: 'fred', password: 'secret'}).then(function(user) {
        $scope.user = user;
   });
 
 
+  $scope.login = function(credentials) {
+
+    console.log('this is called');
+
+    console.log(credentials);
+
+  }
 
 }]);
