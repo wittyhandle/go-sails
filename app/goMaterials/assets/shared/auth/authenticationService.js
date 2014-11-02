@@ -11,6 +11,8 @@ go.factory('authenticationService', ['$q', '$timeout', function($q, $timeout) {
 
     authenticate: function (credentials) {
 
+      credentials = null;
+
       var deferred = $q.defer();
 
       $timeout(function() {

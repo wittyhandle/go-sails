@@ -30,6 +30,6 @@ go.controller('LoginController', ['$scope', '$rootScope', 'authenticationService
 
     $scope.invalid = true;
 
-  }
+  };
 
 }]);
