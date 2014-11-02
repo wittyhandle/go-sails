@@ -10,7 +10,4 @@
 include_recipe "mysql::server"
 include_recipe "mysql::client"
 
-include_recipe "nodejs"
-
-nodejs_npm 'sails'
-nodejs_npm 'gulp'
+include_recipe 'nodejs::default'
